@@ -40,7 +40,7 @@ export const Navigation = () => {
             </li>
           </ul>
         </nav>
-
+        {/* routes */}
         <Routes>
           <Route
             path='about'
