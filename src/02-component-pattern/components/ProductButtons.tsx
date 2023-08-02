@@ -31,7 +31,7 @@ export const ProductButtons = ({ className, style }: Props) => {
         onClick={() => increaseBy(+1)}
       >
         {' '}
-        +{' '}
+        +
       </button>
     </div>
   );
