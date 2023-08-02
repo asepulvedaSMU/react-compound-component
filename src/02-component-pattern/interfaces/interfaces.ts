@@ -5,18 +5,19 @@ import { Props as ProductTitleProps } from '../components/ProductTitle';
 
 export interface Product {
   id: string;
-  title: string;
   img?: string;
+  title: string;
 }
+
 export interface ProductContextProps {
   counter: number;
-  increaseBy: (value: number) => void;
   product: Product;
+  increaseBy: (value: number) => void;
 }
 
 export interface ProductCardHOCProps {
-  ({ product, children }: ProductCardProps): JSX.Element;
-  Title: (Props: ProductTitleProps) => JSX.Element;
-  Image: (Props: ProductImageProps) => JSX.Element;
+  ({ children, product }: ProductCardProps): JSX.Element;
   Buttons: (Props: ProductButtonsProps) => JSX.Element;
+  Image: (Props: ProductImageProps) => JSX.Element;
+  Title: (Props: ProductTitleProps) => JSX.Element;
 }

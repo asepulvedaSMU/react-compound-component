@@ -1,20 +1,23 @@
-import '../styles/custom-styles.css';
 import {
-  ProductButtons,
   ProductCard,
   ProductImage,
   ProductTitle,
-} from '../components/';
+  ProductButtons,
+} from '../components';
+import '../styles/custom-styles.css';
+
 const product = {
   id: '1',
-  title: 'Coffe Mug - Card',
+  title: 'Coffee Mug - Card',
   img: './coffee-mug.png',
 };
+
 export const ShoppingPage = () => {
   return (
     <div>
-      <h1>ShoppingPage</h1>
+      <h1>Shopping Store</h1>
       <hr />
+
       <div
         style={{
           display: 'flex',
@@ -26,8 +29,8 @@ export const ShoppingPage = () => {
           product={product}
           className='bg-dark text-white'
         >
-          <ProductCard.Image img={product.img} />
-          <ProductCard.Title title={product.title} />
+          <ProductCard.Image className='custom-image' />
+          <ProductCard.Title className='text-bold' />
           <ProductCard.Buttons className='custom-buttons' />
         </ProductCard>
 
@@ -36,13 +39,10 @@ export const ShoppingPage = () => {
           className='bg-dark text-white'
         >
           <ProductImage
-            img={product.img}
             className='custom-image'
+            style={{ boxShadow: '10px 10px 10px rgba(0,0,0,0.2)' }}
           />
-          <ProductTitle
-            title={'aer'}
-            className='text-white'
-          />
+          <ProductTitle className='text-bold' />
           <ProductButtons className='custom-buttons' />
         </ProductCard>
 
@@ -52,9 +52,16 @@ export const ShoppingPage = () => {
             backgroundColor: '#70D1F8',
           }}
         >
-          <ProductImage />
-          <ProductTitle />
-          <ProductButtons />
+          <ProductImage
+            style={{ boxShadow: '10px 10px 10px rgba(0,0,0,0.2)' }}
+          />
+          <ProductTitle style={{ fontWeight: 'bold' }} />
+          <ProductButtons
+            style={{
+              display: 'flex',
+              justifyContent: 'end',
+            }}
+          />
         </ProductCard>
       </div>
     </div>
