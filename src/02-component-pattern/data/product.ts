@@ -7,7 +7,7 @@ const product1 = {
 };
 const product2 = {
   id: '2',
-  title: 'Coffee Mug - Card',
   img: './coffee-mug2.png',
+  title: 'Coffee Mug - Card',
 };
 export const products: Product[] = [product1, product2];
