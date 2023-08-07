@@ -12,7 +12,7 @@ export const MyTextInput = ({ label, ...props }: Props) => {
 	//con la opcion comentada con meta
 	// const [field, meta] = useField(props);
 	const [field] = useField(props);
-	console.log(field);
+	// console.log(field);
 	return (
 		<>
 			<label htmlFor={props.id || props.name}>{label}</label>
